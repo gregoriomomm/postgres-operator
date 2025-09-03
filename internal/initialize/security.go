@@ -38,8 +38,8 @@ func RestrictedSecurityContext() *corev1.SecurityContext {
 		// Limit filesystem changes to volumes that are mounted read-write.
 		ReadOnlyRootFilesystem: Bool(true),
 
-		// Fail to start the container if its image runs as UID 0 (root).
-		RunAsNonRoot: Bool(true),
+		// Allow root containers for Apache AGE compatibility
+		RunAsNonRoot: Bool(false),
 
 		SeccompProfile: &corev1.SeccompProfile{
 			Type: corev1.SeccompProfileTypeRuntimeDefault,

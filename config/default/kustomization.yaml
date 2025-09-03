@@ -16,5 +16,5 @@ resources:
 
 images:
 - name: postgres-operator
-  newName: registry.developers.crunchydata.com/crunchydata/postgres-operator
+  newName: localhost/postgres-age-operator
   newTag: latest
